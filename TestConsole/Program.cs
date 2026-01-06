@@ -1,4 +1,5 @@
 ﻿using SoftwareSimulator;
+using TransportSimulator;
 
 namespace TestConsole
 {
@@ -7,6 +8,13 @@ namespace TestConsole
         static void Main(string[] args)
         {
             //TestMethod();
+            //CompanySimulatorFunction();
+            Transport transport = new Transport(new HumanDriver());
+            transport.Deliver("Kenya");
+        }
+
+        private static void CompanySimulatorFunction()
+        {
             List<Company> companies = new List<Company>()
             {
                 new GameDevCompany(),

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareSimulator", "SoftwareSimulator\SoftwareSimulator.csproj", "{84244B19-B7CC-46B5-B3BD-64F441C4BD72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportSimulator", "TransportSimulator\TransportSimulator.csproj", "{EF645F0C-4760-4D1C-AA0D-D478A8A71B70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{84244B19-B7CC-46B5-B3BD-64F441C4BD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84244B19-B7CC-46B5-B3BD-64F441C4BD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84244B19-B7CC-46B5-B3BD-64F441C4BD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF645F0C-4760-4D1C-AA0D-D478A8A71B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF645F0C-4760-4D1C-AA0D-D478A8A71B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF645F0C-4760-4D1C-AA0D-D478A8A71B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF645F0C-4760-4D1C-AA0D-D478A8A71B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
