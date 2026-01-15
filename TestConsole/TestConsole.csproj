@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PaymentSimulatorStrategyPattern\PaymentSimulatorStrategyPattern.csproj" />
     <ProjectReference Include="..\SoftwareSimulator\SoftwareSimulator.csproj" />
     <ProjectReference Include="..\TransportSimulator\TransportSimulator.csproj" />
   </ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using SoftwareSimulator;
 using TransportSimulator;
+using PaymentSimulatorStrategyPattern;
 
 namespace TestConsole
 {
@@ -9,6 +10,15 @@ namespace TestConsole
         {
             //TestMethod();
             //CompanySimulatorFunction();
+            //TransportSimulatorFunction();
+            ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
+            shoppingCart.Checkout(120);
+            ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
+            shoppingCart2.Checkout(230);
+        }
+
+        private static void TransportSimulatorFunction()
+        {
             Transport transport = new Transport(new HumanDriver());
             transport.Deliver("Kenya");
         }
