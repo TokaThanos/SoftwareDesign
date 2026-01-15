@@ -12,6 +12,16 @@ namespace TestConsole
             //TestMethod();
             //CompanySimulatorFunction();
             //TransportSimulatorFunction();
+            //OrderSimulatorFunction();
+
+            ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
+            shoppingCart.Checkout(120);
+            ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
+            shoppingCart2.Checkout(230);
+        }
+
+        private static void OrderSimulatorFunction()
+        {
             var itemList = new List<Item>()
             {
                 new Item("Controller", 1250, 0.3, 2),
@@ -23,12 +33,6 @@ namespace TestConsole
             Order order = new Order(itemList);
             Console.WriteLine($"Item shipped! Total item cost is {order.GetTotalCost()} with shipping charges {order.GetShippingCost()}");
             Console.WriteLine($"Estimated delivery on {order.GetShippingDate()}");
-
-
-            ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
-            shoppingCart.Checkout(120);
-            ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
-            shoppingCart2.Checkout(230);
         }
 
         private static void TransportSimulatorFunction()
