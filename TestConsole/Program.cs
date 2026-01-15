@@ -1,5 +1,6 @@
 ﻿using SoftwareSimulator;
 using TransportSimulator;
+using OrderSimulator;
 using PaymentSimulatorStrategyPattern;
 
 namespace TestConsole
@@ -11,6 +12,19 @@ namespace TestConsole
             //TestMethod();
             //CompanySimulatorFunction();
             //TransportSimulatorFunction();
+            var itemList = new List<Item>()
+            {
+                new Item("Controller", 1250, 0.3, 2),
+                //new Item("Mouse", 3500, 0.65, 1),
+                //new Item("LightBar", 3210, 0.2, 1),
+                //new Item("Monitor", 19650, 10.5, 2)
+            };
+
+            Order order = new Order(itemList);
+            Console.WriteLine($"Item shipped! Total item cost is {order.GetTotalCost()} with shipping charges {order.GetShippingCost()}");
+            Console.WriteLine($"Estimated delivery on {order.GetShippingDate()}");
+
+
             ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
             shoppingCart.Checkout(120);
             ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
