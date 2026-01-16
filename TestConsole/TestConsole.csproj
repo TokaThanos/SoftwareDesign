@@ -12,6 +12,8 @@
     <ProjectReference Include="..\PaymentSimulatorStrategyPattern\PaymentSimulatorStrategyPattern.csproj" />
     <ProjectReference Include="..\SoftwareSimulator\SoftwareSimulator.csproj" />
     <ProjectReference Include="..\TransportSimulator\TransportSimulator.csproj" />
+    <ProjectReference Include="..\WeatherForecastObserverPullPattern\WeatherForecastObserverPullPattern.csproj" />
+    <ProjectReference Include="..\WeatherForecastSimulatorObserverPatternPush\WeatherForecastSimulatorObserverPatternPush.csproj" />
   </ItemGroup>
 
 </Project>

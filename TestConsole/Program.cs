@@ -2,6 +2,8 @@
 using TransportSimulator;
 using OrderSimulator;
 using PaymentSimulatorStrategyPattern;
+using WeatherForecastSimulatorObserverPatternPush;
+using WeatherForecastObserverPullPattern;
 
 namespace TestConsole
 {
@@ -13,7 +15,32 @@ namespace TestConsole
             //CompanySimulatorFunction();
             //TransportSimulatorFunction();
             //OrderSimulatorFunction();
+            //ShoppingCardSimulatorFunctionUsingStrategyPattern();
 
+            WeatherForecastSimulatorFunctionUsingObserverPushPattern();
+            WeatherForecastSimulatorFunctionUsingObserverPullPattern();
+
+
+        }
+
+        private static void WeatherForecastSimulatorFunctionUsingObserverPullPattern()
+        {
+            WeatherForecastStation station = new WeatherForecastStation();
+            station.AddSubscriber(new TempStatDisplay(station));
+            station.AddSubscriber(new HumStatDisplay(station));
+            station.SetWeatherData(12.55, 52);
+        }
+
+        private static void WeatherForecastSimulatorFunctionUsingObserverPushPattern()
+        {
+            WeatherStation weatherStation = new WeatherStation();
+            weatherStation.AddSubscriber(new StatisticsDisplay());
+            weatherStation.AddSubscriber(new CurrentConditionDisplay());
+            weatherStation.SetWeatherReading(14, 55);
+        }
+
+        private static void ShoppingCardSimulatorFunctionUsingStrategyPattern()
+        {
             ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
             shoppingCart.Checkout(120);
             ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
