@@ -4,6 +4,7 @@ using OrderSimulator;
 using PaymentSimulatorStrategyPattern;
 using WeatherForecastSimulatorObserverPatternPush;
 using WeatherForecastObserverPullPattern;
+using PizzaSimulatorDecoratorPattern;
 
 namespace TestConsole
 {
@@ -16,11 +17,25 @@ namespace TestConsole
             //TransportSimulatorFunction();
             //OrderSimulatorFunction();
             //ShoppingCardSimulatorFunctionUsingStrategyPattern();
+            //WeatherForecastSimulatorFunctionUsingObserverPushPattern();
+            //WeatherForecastSimulatorFunctionUsingObserverPullPattern();
+            PizzaSimulatorFunction();
+        }
 
-            WeatherForecastSimulatorFunctionUsingObserverPushPattern();
-            WeatherForecastSimulatorFunctionUsingObserverPullPattern();
+        private static void PizzaSimulatorFunction()
+        {
+            IBasePizza pizza = new PlainPizza();
+            pizza = new Chicken(new Mushroom(pizza));
+            IBasePizza pizza2 = new Farmhouse();
+            pizza2 = new Mushroom(new Cheese(pizza2));
+            GetPizzaOrderDetails(pizza);
+            GetPizzaOrderDetails(pizza2);
+        }
 
-
+        private static void GetPizzaOrderDetails(IBasePizza pizza)
+        {
+            Console.WriteLine($"Pizza description: {pizza.GetDescription()}");
+            Console.WriteLine($"Pizza price is {pizza.GetCost()} rs.");
         }
 
         private static void WeatherForecastSimulatorFunctionUsingObserverPullPattern()
