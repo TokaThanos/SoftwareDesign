@@ -5,6 +5,7 @@ using PaymentSimulatorStrategyPattern;
 using WeatherForecastSimulatorObserverPatternPush;
 using WeatherForecastObserverPullPattern;
 using PizzaSimulatorDecoratorPattern;
+using LogisticsServiceFactoryPattern;
 
 namespace TestConsole
 {
@@ -19,7 +20,14 @@ namespace TestConsole
             //ShoppingCardSimulatorFunctionUsingStrategyPattern();
             //WeatherForecastSimulatorFunctionUsingObserverPushPattern();
             //WeatherForecastSimulatorFunctionUsingObserverPullPattern();
-            PizzaSimulatorFunction();
+            //PizzaSimulatorFunction();
+            LogisticsFactoryFuction();
+        }
+
+        private static void LogisticsFactoryFuction()
+        {
+            LogisticsService service = new LogisticsService();
+            service.Send("water");
         }
 
         private static void PizzaSimulatorFunction()
@@ -56,9 +64,9 @@ namespace TestConsole
 
         private static void ShoppingCardSimulatorFunctionUsingStrategyPattern()
         {
-            ShoppingCart shoppingCart = new ShoppingCart(new CreditCardPayment());
+            ShoppingCart shoppingCart = new ShoppingCart(new CashPayment());
             shoppingCart.Checkout(120);
-            ShoppingCart shoppingCart2 = new ShoppingCart(new UPIPayment());
+            ShoppingCart shoppingCart2 = new ShoppingCart(new CreditCardPayment());
             shoppingCart2.Checkout(230);
         }
 
