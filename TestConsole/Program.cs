@@ -6,6 +6,8 @@ using WeatherForecastSimulatorObserverPatternPush;
 using WeatherForecastObserverPullPattern;
 using PizzaSimulatorDecoratorPattern;
 using LogisticsServiceFactoryPattern;
+using CheckoutServiceAbstractFactory.Classes;
+using CheckoutServiceAbstractFactory.Service;
 
 namespace TestConsole
 {
@@ -21,7 +23,16 @@ namespace TestConsole
             //WeatherForecastSimulatorFunctionUsingObserverPushPattern();
             //WeatherForecastSimulatorFunctionUsingObserverPullPattern();
             //PizzaSimulatorFunction();
-            LogisticsFactoryFuction();
+            //LogisticsFactoryFuction();
+            CheckoutServiceAbstractFactoryFunction();
+        }
+
+        private static void CheckoutServiceAbstractFactoryFunction()
+        {
+            CheckoutService service = new CheckoutService(new IndiaFactory(), "razorpay");
+            service.CompleteOrder();
+            service = new CheckoutService(new USFactory(), "stripe");
+            service.CompleteOrder();
         }
 
         private static void LogisticsFactoryFuction()

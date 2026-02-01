@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CheckoutServiceAbstractFactory\CheckoutServiceAbstractFactory.csproj" />
     <ProjectReference Include="..\LogisticsServiceFactoryPattern\LogisticsServiceFactoryPattern.csproj" />
     <ProjectReference Include="..\OrderSimulator\OrderSimulator.csproj" />
     <ProjectReference Include="..\PaymentSimulatorStrategyPattern\PaymentSimulatorStrategyPattern.csproj" />

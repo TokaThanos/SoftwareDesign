@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaSimulatorDecoratorPatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsServiceFactoryPattern", "LogisticsServiceFactoryPattern\LogisticsServiceFactoryPattern.csproj", "{9ECCD886-C148-4EB0-A0A2-254E758C672F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutServiceAbstractFactory", "CheckoutServiceAbstractFactory\CheckoutServiceAbstractFactory.csproj", "{053EB0D0-7DA1-469E-A369-C82B51273F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9ECCD886-C148-4EB0-A0A2-254E758C672F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ECCD886-C148-4EB0-A0A2-254E758C672F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ECCD886-C148-4EB0-A0A2-254E758C672F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053EB0D0-7DA1-469E-A369-C82B51273F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053EB0D0-7DA1-469E-A369-C82B51273F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053EB0D0-7DA1-469E-A369-C82B51273F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053EB0D0-7DA1-469E-A369-C82B51273F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
