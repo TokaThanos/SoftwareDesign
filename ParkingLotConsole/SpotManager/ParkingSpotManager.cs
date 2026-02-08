@@ -6,9 +6,9 @@ namespace ParkingLotConsole.SpotManager
     internal abstract class ParkingSpotManager
     {
         private List<ParkingSpot> _spots;
-        private ParkingSpotLookUpStrategy _lookUpStrategy;
+        private IParkingSpotLookUpStrategy _lookUpStrategy;
 
-        protected ParkingSpotManager(List<ParkingSpot> spots, ParkingSpotLookUpStrategy lookUpStrategy)
+        protected ParkingSpotManager(List<ParkingSpot> spots, IParkingSpotLookUpStrategy lookUpStrategy)
         {
             _spots = spots;
             _lookUpStrategy = lookUpStrategy;
@@ -32,6 +32,11 @@ namespace ParkingLotConsole.SpotManager
         public void UnPark(ParkingSpot spot)
         {
             spot.ReleaseSpot();
+        }
+
+        public bool hasFreeSpot()
+        {
+            return _spots.Any(spot => spot.IsSpotFree());
         }
     }
 }

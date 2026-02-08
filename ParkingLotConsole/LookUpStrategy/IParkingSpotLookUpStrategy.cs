@@ -2,7 +2,7 @@
 
 namespace ParkingLotConsole.LookUpStrategy
 {
-    internal interface ParkingSpotLookUpStrategy
+    internal interface IParkingSpotLookUpStrategy
     {
         public List<ParkingSpot> SelectSpots(List<ParkingSpot> spots);
     }

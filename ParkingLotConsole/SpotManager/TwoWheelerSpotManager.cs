@@ -5,6 +5,6 @@ namespace ParkingLotConsole.SpotManager
 {
     internal class TwoWheelerSpotManager : ParkingSpotManager
     {
-        public TwoWheelerSpotManager(List<ParkingSpot> spots, ParkingSpotLookUpStrategy lookUpStrategy) : base(spots, lookUpStrategy) { }
+        public TwoWheelerSpotManager(List<ParkingSpot> spots, IParkingSpotLookUpStrategy lookUpStrategy) : base(spots, lookUpStrategy) { }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ParkingLotConsole.LookUpStrategy
 {
-    class RandomLookUpStrategy : ParkingSpotLookUpStrategy
+    class RandomLookUpStrategy : IParkingSpotLookUpStrategy
     {
         public List<ParkingSpot> SelectSpots(List<ParkingSpot> spots)
         {
